@@ -27,7 +27,7 @@ npx hardhat init
 # double check dns
 vi hardhat.config.js
 
-vi contracts/Hello.sol
+vi contracts/Gaming.sol
 
 # double check dns
 vi src/App.js
