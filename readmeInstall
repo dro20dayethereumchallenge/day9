@@ -38,6 +38,7 @@ vi scripts/deploy.js
 
 ### checklist to run this example
 ### 1.) set the inbound rule for your DAPP 
+### 1.1) remove 'Lock.sol' from your contracts dir
 ### 2.) connect to your network ( awsw dns )
 ### 3.) load the signer[0] account to 'fundGame'
 
