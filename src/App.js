@@ -9,8 +9,6 @@ function App() {
   const [provider, setProvider] = useState(null);
   const [signer, setSigner] = useState(null);
   const [contract, setContract] = useState(null);
-  const [message, setMessage] = useState("");
-  const [newMessage, setNewMessage] = useState("");
   const [result, setResult] = useState("");
   const [wager, setWager] = useState("");
   const [display, setDisplay] = useState("");
