@@ -41,7 +41,7 @@ vi scripts/deploy.js
 ### 1.1) remove 'Lock.sol' from your contracts dir
 ### 2.) connect to your network ( awsw dns )
 ### 3.) load the signer[0] account to 'fundGame'
-
+### 4.) revert errors?  -> metamask, settings, "denounce"
 
 /home/ubuntu/hello   npx hardhat node --hostname ec2-35-86-73-162.us-west-2.compute.amazonaws.com
 /home/ubuntu/hello npx   hardhat run scripts/deploy.js --network localhost
