@@ -32,21 +32,13 @@ function App() {
     initialize();
   }, [GamingAddress, GamingAbi]);
 
-  const fetchMessage = async () => {
-    if (contract) {
-      const currentMessage = await contract.get();
-      setMessage(currentMessage);
-    }
-  };
-
-
   const fundGame = async () => {
     var line = ""
     const tx1 = await contract.fundGame({ value: ethers.parseEther("100.0")})
     await tx1.wait();
   }
 
-  const updateMessage = async () => {
+  const playGame = async () => {
      var line = ""
      const tx = await contract.winOrLose(display , guess , {from: signer[0] ,value: ethers.parseEther(wager) })
      await tx.wait();
@@ -108,7 +100,7 @@ function App() {
 
           <div style={{ marginTop: "20px" }}>
         <button onClick={fundGame}>Fund Game</button>
-        <button onClick={updateMessage}>Play Game</button>
+        <button onClick={playGame}>Play Game</button>
 
         </div>
         <div style={{ marginTop: "20px" }}>
