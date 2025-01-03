@@ -1,6 +1,5 @@
-import React,{ Component, useState, useEffect } from 'react'
+import React,{ useState, useEffect } from 'react'
 import { ethers, BrowserProvider } from "ethers";
-//import './App.css';
 import { providers } from 'ethers/providers';
 import GamingAbi from './contractsData/Gaming.json'
 import GamingAddress from './contractsData/Gaming-address.json'
@@ -26,7 +25,6 @@ function App() {
     const GamingContract = new ethers.Contract(GamingAddress.address, GamingAbi.abi, signer);
     setContract(GamingContract);
  };
-
     initialize();
   }, [GamingAddress, GamingAbi]);
 
@@ -53,7 +51,6 @@ function App() {
        result: event.args[4],
      }));
      setPlayerSessions(sessions.reverse()); // Show latest first
-
   };
 
  return (
@@ -95,8 +92,7 @@ function App() {
             </div>
           </div>
 
-
-          <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "20px" }}>
         <button onClick={fundGame}>Fund Game</button>
         <button onClick={playGame}>Play Game</button>
 
